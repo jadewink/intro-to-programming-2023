@@ -17,3 +17,39 @@ for (let i = 0; i < skills.length; i++) {
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 }
+
+const messageForm = document.getElementsByName('leave_message');
+let removeButton;
+const messageSection = document.getElementById('messages');
+const messageList = messageSection.getElementsByTagName('ul')[0];
+
+//When user enters form data and clicks submit, append data to Message List with a remove button for each message
+messageForm[0].addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const usersName = event.target.usersName.value;
+    const usersEmail = event.target.usersEmail.value;
+    const usersMessage = event.target.usersMessage.value;
+    // console.log(usersName, usersEmail, usersMessage); 
+    const newMessage = document.createElement('li');
+
+    newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span> wrote: '+ usersMessage +' </span>';
+
+    removeButton = document.createElement('button');
+    removeButton.innerHTML = "remove";
+    removeButton.type = "button";   
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    messageForm[0].reset();
+
+    });
+
+//When remove button is clicked, remove message from Message List
+messageList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        const entry = event.target.parentNode;
+        entry.remove();
+    }
+});
+
