@@ -6,15 +6,19 @@
         <meta name="description" content="Welcome to Jordyn Jones' portfolio website built using my javascript and web programming abilities">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Jordyn Jones">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <nav>
-            <a href="index.html">home</a>
-            <a href="#about">about</a>
-            <a href="#experience">experience</a>
-            <a href="#skills">skills</a>
-            <a href="#connect">connect</a>
+            <ul class="list">
+                <li><a href="index.html">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#connect">connect</a></li>
+            </ul>
         </nav>
+        <!-- <img id="bgImg" src ="lights_bg.jpg"/> -->
         <section id="about">
             <h2>About</h2>
             <img src ="headshot.jpg" width="200px" />
@@ -61,14 +65,14 @@
         </section>
         <section id="skills">
             <h2>Skills</h2>
-           <ul></ul>
+            <ul></ul>
         </section>
         <section id="connect">
-                <h2>Connect</h2>
-                <a href="mailto:jordynjones@gmail.com" target="new">email</a>
-                <a href="https://www.github.com/jadewink" target="new">github</a>
-                <a href="https://www.linkedin.com/in/jordynxjones" target="new">linkedin</a>
-                <a href="https://www.twitter.com/jadewinkdotcom" target="new">twitter</a>
+            <h2>Connect</h2>
+            <a href="mailto:jordynjones@gmail.com" target="new">email</a>
+            <a href="https://www.github.com/jadewink" target="new">github</a>
+            <a href="https://www.linkedin.com/in/jordynxjones" target="new">linkedin</a>
+            <a href="https://www.twitter.com/jadewinkdotcom" target="new">twitter</a>
         </section>
         <section>
             <h2>Leave a Message</h2>
@@ -85,7 +89,7 @@
                 <br/>
                 <textarea id="usersMessage" required="true"></textarea>
                 <br/>
-                <button type="submit">Submit</button>
+                <button id="btnSubmit" type="submit">Submit</button>
             </form>
         </section>
         <section id="messages">

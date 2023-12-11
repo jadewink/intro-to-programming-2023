@@ -36,20 +36,23 @@ messageForm[0].addEventListener('submit', (event) => {
     newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span> wrote: '+ usersMessage +' </span>';
 
     removeButton = document.createElement('button');
+    removeButton.className = "btnRemove";
     removeButton.innerHTML = "remove";
     removeButton.type = "button";   
+
+    //When remove button is clicked, remove message from Message List
+    removeButton.addEventListener('click', (event) => {
+        if (event.target.tagName === 'BUTTON') {
+            const entry = event.target.parentNode;
+            entry.remove();
+        }
+    });
 
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm[0].reset();
 
-    });
-
-//When remove button is clicked, remove message from Message List
-messageList.addEventListener('click', (event) => {
-    if (event.target.tagName === 'BUTTON') {
-        const entry = event.target.parentNode;
-        entry.remove();
-    }
 });
+
+
 
