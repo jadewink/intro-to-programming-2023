@@ -8,7 +8,7 @@
         <meta name="author" content="Jordyn Jones">
         <link rel="stylesheet" href="css/index.css">
     </head>
-    <body>
+    <body class="content">
         <nav>
             <ul class="list">
                 <li><a href="index.html">home</a></li>
@@ -21,47 +21,60 @@
         <!-- <img id="bgImg" src ="lights_bg.jpg"/> -->
         <section id="about">
             <h2>About</h2>
-            <img src ="headshot.jpg" width="200px" />
-            <p>As an accomplished web developer and an aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands 
-                of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. Combined with my diverse technical background, 
-                exceptional attention to detail, and stellar organizational skills, I deliver successful projects on time and within budget. 
-                Driven by my career experiences I have developed a keen interest in coding, leading me to pursue independent study of programming. Thriving on complex 
-                technical challenges, I am committed to continuously expanding my knowledge base, fostering collaboration, and driving collective success within any team 
-                I join.</p>
+            <div class="container">
+                <img src="headshot.jpg" class="about-1" />
+                <p class="about-2">As an accomplished web developer and an aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands 
+                    of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. Combined with my diverse technical background, 
+                    exceptional attention to detail, and stellar organizational skills, I deliver successful projects on time and within budget. 
+                    Driven by my career experiences I have developed a keen interest in coding, leading me to pursue independent study of programming. Thriving on complex 
+                    technical challenges, I am committed to continuously expanding my knowledge base, fostering collaboration, and driving collective success within any team 
+                    I join.
+                </p>
+            </div>
         </section>
         <section id="experience">
             <h2>Experience</h2>
-            <h3>Fiscal Specialist 1</h3>
-            <p>University of Washington - Paul G. Allen School of Computer Science & Engineering</p>
-            <ul>
-                <li>Graduate student hiring, payroll coordination, generating offer letters and costing allocations as Workday HCM Initiate 2 security role.</li>
-                <li>Assist students in completion of Employment Authorization Form I-9 as Workday I-9 Coordinator security role.</li>
-                <li>Manage payroll-related communication and documentation, assist with intern stipend payments.</li>
-                <li>Support student and faculty payroll inquiries and actively participate in diverse payroll-related assignments and projects.</li>
-                <li>Engage in collaborative efforts with the Payroll Manager, Grants Managers, Graduate Student Services Team, Faculty members, and pertinent stakeholders to resolve queries and address any concerns related to graduate student payroll.</li>
-            </ul>
-            <h3>Ecommerce Web Developer and Customer Experience Specialist</h3>
-            <p>Blue Bunny Hollow</p>
-            <ul>
-                <li>Architected and implemented a seamless customer experience for end-to-end ecommerce flow, leveraging custom CSS and integrating secure checkout functionality with Stripe and PayPal.</li>
-                <li> Developed a scalable and responsive web presence utilizing Squarespace, incorporating best practices for search engine optimization (SEO), branding design, and devising effective social media marketing strategies.</li>
-                <li>Provided comprehensive training to clients on managing back-end inventory and streamlining order fulfillment processes, ensuring smooth operations and efficient workflows.</li>
-            </ul>
-            <h3>Social Media Manager</h3>
-            <p>Virtually Savvy</p>
-            <ul>
-                <li>Curated engaging content for clients in the remodeling, design, and local wine industries, ensuring a fresh and captivating online presence.</li>
-                <li>Executed daily social media management for clients, actively driving interactions, fostering engagement, and spearheading follower growth on prominent platforms including Facebook, Instagram, and Pinterest.</li>
-            </ul>
-            <h3>Technical Implementation Specialist</h3>
-            <p>M2 Information Systems</p>
-            <ul>
-                <li>Orchestrated remote setup of virtual server environments, employing Windows Server, IIS, and seamless integration with Active Directory for new clients.</li>
-                <li>Conducted successful migration of client data and proficiently established SQL Server databases.</li>
-                <li>Spearheaded the deployment of successive iterations of M2's flagship secure messaging product, MicroBloggingMD (MBMD), for both new and existing clients.</li>
-                <li>Successfully program-managed the ONC-ATCB Electronic Health Record (EHR) certification process for MBMD and M2.Webchart.</li>
-                <li>Utilized Selenium C# to build test automation within NUnit/WebDriver.</li>
-            </ul>
+            <span class="container">
+                <span class="item">
+                    <h3>Fiscal Specialist 1</h3>
+                    <p>University of Washington - Paul G. Allen School of Computer Science & Engineering</p>
+                    <ul>
+                        <li>Graduate student hiring, payroll coordination, generating offer letters and costing allocations as Workday HCM Initiate 2 security role.</li>
+                        <li>Assist students in completion of Employment Authorization Form I-9 as Workday I-9 Coordinator security role.</li>
+                        <li>Manage payroll-related communication and documentation, assist with intern stipend payments.</li>
+                        <li>Support student and faculty payroll inquiries and actively participate in diverse payroll-related assignments and projects.</li>
+                        <li>Engage in collaborative efforts with the Payroll Manager, Grants Managers, Graduate Student Services Team, Faculty members, and pertinent stakeholders to resolve queries and address any concerns related to graduate student payroll.</li>
+                    </ul>
+                </span>
+                <span class="item">
+                    <h3>Ecommerce Web Developer and Customer Experience Specialist</h3>
+                    <p>Blue Bunny Hollow</p>
+                    <ul>
+                        <li>Architected and implemented a seamless customer experience for end-to-end ecommerce flow, leveraging custom CSS and integrating secure checkout functionality with Stripe and PayPal.</li>
+                        <li> Developed a scalable and responsive web presence utilizing Squarespace, incorporating best practices for search engine optimization (SEO), branding design, and devising effective social media marketing strategies.</li>
+                        <li>Provided comprehensive training to clients on managing back-end inventory and streamlining order fulfillment processes, ensuring smooth operations and efficient workflows.</li>
+                    </ul>
+                </span>
+                <span class="item">
+                    <h3>Social Media Manager</h3>
+                    <p>Virtually Savvy</p>
+                    <ul>
+                        <li>Curated engaging content for clients in the remodeling, design, and local wine industries, ensuring a fresh and captivating online presence.</li>
+                        <li>Executed daily social media management for clients, actively driving interactions, fostering engagement, and spearheading follower growth on prominent platforms including Facebook, Instagram, and Pinterest.</li>
+                    </ul>
+                </span>
+                <span class="item">
+                    <h3>Technical Implementation Specialist</h3>
+                    <p>M2 Information Systems</p>
+                    <ul>
+                        <li>Orchestrated remote setup of virtual server environments, employing Windows Server, IIS, and seamless integration with Active Directory for new clients.</li>
+                        <li>Conducted successful migration of client data and proficiently established SQL Server databases.</li>
+                        <li>Spearheaded the deployment of successive iterations of M2's flagship secure messaging product, MicroBloggingMD (MBMD), for both new and existing clients.</li>
+                        <li>Successfully program-managed the ONC-ATCB Electronic Health Record (EHR) certification process for MBMD and M2.Webchart.</li>
+                        <li>Utilized Selenium C# to build test automation within NUnit/WebDriver.</li>
+                    </ul>
+                </span>
+            </span>
         </section>
         <section id="skills">
             <h2>Skills</h2>
@@ -78,17 +91,11 @@
             <h2>Leave a Message</h2>
             <form method="post" name="leave_message">
                 <label for="usersName">Name:</label>
-                <br/>
                 <input type="text" id="usersName" required="true">
-                <br/>
                 <label for="usersEmail">Email:</label>
-                <br/>
                 <input type="email" id="usersEmail" required="true">
-                <br/>
                 <label for="usersMessage">Message:</label>
-                <br/>
                 <textarea id="usersMessage" required="true"></textarea>
-                <br/>
                 <button id="btnSubmit" type="submit">Submit</button>
             </form>
         </section>

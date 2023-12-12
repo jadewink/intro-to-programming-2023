@@ -1,5 +1,5 @@
 const today = new Date();
-thisYear = today.getFullYear();
+const thisYear = today.getFullYear();
 
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
@@ -30,7 +30,7 @@ messageForm[0].addEventListener('submit', (event) => {
     const usersName = event.target.usersName.value;
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
-    // console.log(usersName, usersEmail, usersMessage); 
+    // console.log(usersName, usersEmail, usersMessage);
     const newMessage = document.createElement('li');
 
     newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span> wrote: '+ usersMessage +' </span>';
@@ -38,7 +38,7 @@ messageForm[0].addEventListener('submit', (event) => {
     removeButton = document.createElement('button');
     removeButton.className = "btnRemove";
     removeButton.innerHTML = "remove";
-    removeButton.type = "button";   
+    removeButton.type = "button";
 
     //When remove button is clicked, remove message from Message List
     removeButton.addEventListener('click', (event) => {
@@ -52,7 +52,13 @@ messageForm[0].addEventListener('submit', (event) => {
     messageList.appendChild(newMessage);
     messageForm[0].reset();
 
-});
+    });
 
-
+// //When remove button is clicked, remove message from Message List
+// messageList.addEventListener('click', (event) => {
+//     if (event.target.tagName === 'BUTTON') {
+//         const entry = event.target.parentNode;
+//         entry.remove();
+//     }
+// });
 
