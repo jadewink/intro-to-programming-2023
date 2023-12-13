@@ -4,12 +4,21 @@
 * {
   box-sizing: border-box;
 }
+html, 
+body, 
+.content {
+  height: 100%; /*needed for proper layout*/
+}
 body {
+  display:flex;
+  flex-direction:column;
+  /* min-height:100vh; */
   background-color: #0d1117;
   color: white;
   font-family: "Lato", sans-serif;
   margin: 0;
-  min-height: 200vh;
+  /* min-height: 200vh; */
+  overflow: hidden;
 }
 ul {
   margin: 0;
@@ -19,6 +28,7 @@ ul {
 p {
 	font-size: .95em;
 	margin-bottom: 1.8em;
+  margin: 0 0 0 0;
 }
 img {
 	max-width: 100%;
@@ -44,27 +54,6 @@ a {
     text-decoration: underline;
   }
 }
-p {
-  margin: 0 0 0 0;
-}
-
-/* nav {
-  background-color: #0d1117;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 20px 16px 20px;
-  display: flex;
-  align-items: center;
-  transition: 0.3s ease-out;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
-  color: white;
-  font-size: 16px;
-}
-nav li {
-  padding:5px;
-} */
 
 /* ================================= 
   Base Layout Styles
@@ -98,12 +87,18 @@ nav li {
 	color: #ffffff;
 }
 
-
 /* ---- Layout Containers ---- */
 
 .main-header {
 	padding-top: .5em;
 	padding-bottom: .5em;
+  flex: 0 0 auto;
+  /* background-color: #dcdcdc; */
+}
+.main-content {
+  flex: 1 1 auto;
+  position: relative;/* need this to position inner content */
+  overflow-y: auto;
 }
 .banner,
 .main-footer {
@@ -111,16 +106,21 @@ nav li {
 }
 .banner {
 	color: #fff;
-	background: #3acec2;
+	background-image: url("../lights_bg.jpg");
+  background-size: cover;
 	padding: 3.2em 0;
 	margin-bottom: 48px;
+}
+.row {
+  flex: 1;
 }
 .col {
 	padding-right: 1em;
 	padding-left: 1em;
 }
 .main-footer {
-	background: #d9e4ea;
+	/* background: #d9e4ea; */
+  flex: 0 0 auto;
 	padding: 2em 0;
 	margin-top: 30px;
 }
@@ -134,27 +134,18 @@ nav li {
 	margin-bottom: 0;
 }
 .feat-img {
-	border-radius: 5px;
+	border-radius: 50%;
 }
 section {
   padding: 5px;
 }
-
-/*.content {
-  position:absolute; 
-  top:100px; make this equal to the height of your header tag
-  bottom:100px; make this equal to the height of your footer tag 
-  left:0;
-  right:0;
-}*/
+.content {
+  display: flex;
+  flex-direction: column;
+}
 #experience ul {
   padding-left: 15px; 
-  /* margin-bottom: 10px;  */
-  /* display: block; */
   list-style-type: square;
-  /* margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding-inline-start: 30px; */
 }
 #skills ul {
   padding: 1px; 
@@ -165,45 +156,46 @@ section {
   margin-block-end: 1em;
   padding-inline-start: 30px;
 }
-#messages ul {
-  /* padding: 1px;  */
-  margin-bottom: 10px; 
-  /* display: block; */
-  list-style-type: square;
-  /* margin-block-start: 1em;
-  margin-block-end: 1em; */
-  /* padding-inline-start: 30px; */
+#connect {
+  width:80%;
+  /* margin: auto; */
 }
-#messages:has(ul:empty) {
+.connect {
+  width: 80%;
+  padding: none;
+  margin: auto;
+} 
+.message-list {
+  width:90%;
+  padding: none;
+  margin: auto;
+}
+.message-list-container {
+width: 90%;
+padding: none;
+margin: auto;
+} 
+#message-list {
+  width:100%;
+}
+#message-list ul {
+  margin-bottom: 10px; 
+  list-style-type: square;
+}
+#message-list:has(ul:empty) {
   display: none;
 }
-  /*label {
-  font-size: 1em;
-  color: white; 
- display: block; 
-}*/
 textarea, input {
   font-size: 1em;
-  /* padding: 5px; 
-  margin: 5px; */
   width:100%;
   border-radius: 5px;
 }
-
-/* #messages {
-  font-size: 1em;
-  padding: 5px; 
-  margin: 5px;
-  border: none;
-} */
 #btnSubmit {
   padding: 10px;
   /* margin: 5px; */
   background-color: rgb(15, 165, 118);
   color: white;
   border-radius: 10px;
-  /* border: dotted; */
-  /* display: block; */
 }
 .btnRemove {
   padding: 10px;
@@ -212,68 +204,6 @@ textarea, input {
   border-radius: 10px;
   /* border: dotted; */
 }
-footer {
-  letter-spacing: 10px;
-}
-
-/* .list {
-  list-style-type: none;
-  margin-left: auto;
-  display: none;
-  @media (min-width: 640px) {
-    display: flex;
-  }
-  li {
-    margin-left: 20px;
-  }
-} */
-
-/* ================================= 
-  Flexbox CSS
-==================================== */
-
-/* .experience, .about, .h2 {
-  display: flex;
-  gap:10px;
-  width: 90%;
-   margin: 0 auto; 
-} */
-/* .item {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-} */
- /* .about-1 { 
-  display: flex;
-  max-width: 25%;
-  min-height: 207px;
-}
-.about-2 { 
-  display: flex;
-} */
-.message {
-  padding: 15px;
-  /* display: flex; */
-  /* max-width: 50%; */
-  /* flex-wrap: wrap; */
-  /* gap:10px; */
-  /* align-items: flex-start; */
-}
-/* .message-1, .message-2 { */
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* flex: 1 1 auto; */
-  /* width: 50%; */
-  /* flex: 0 1 50%; */
-/* } */
-/* .message-3, .message-4 { */
-  /* display: flex; */
-  /* flex: 5; */
-  /* flex-direction: row; */
-  /* flex: 0 1 100%; */
-  /* width:100%; */
-/* }  */
-
 /* ================================= 
   Media Queries
 ==================================== */
@@ -286,7 +216,7 @@ footer {
 		width: 90%;
 		margin: 0 auto;
 	}
-  .main-header{
+  .main-header {
     flex-direction: column;
     align-items: center;
   }
@@ -296,11 +226,11 @@ footer {
   .col {
     flex:1 50%;
   }
-  .row{
+  .row {
     flex-wrap: wrap;
     gap: 10px;
   }
-  h2{
+  h2 {
     width: 86%;
   }
 }
@@ -313,7 +243,7 @@ footer {
 		width: 90%;
 		margin: 0 auto;
 	}
-  .main-header{
+  .main-header {
     flex-direction: column;
     align-items: center;
   }
@@ -323,11 +253,11 @@ footer {
   .col {
     flex:1 50%;
   }
-  .row{
+  .row {
     flex-wrap: wrap;
     gap: 10px;
   }
-  h2{
+  h2 {
     width: 86%;
   }
 }
@@ -338,7 +268,7 @@ footer {
 		max-width: 1150px;
     flex-wrap:wrap;
 	}
-  .main-header{
+  .main-header {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -346,7 +276,7 @@ footer {
     /* flex-basis:0; */
     flex:1 30%;
   }
-  h2{
+  h2 {
     width: 86%;
   }
 }
@@ -357,7 +287,7 @@ footer {
 		max-width: 1350px;
     flex-wrap:wrap;
 	}
-  .main-header{
+  .main-header {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -365,7 +295,13 @@ footer {
     /* flex-basis:0; */
     flex:1;
   }
-  h2{
-    width: 70%;
+  h2 {
+    width: 80%;
+  }
+  h2.message-list{
+    width:80%;
+  }
+  .connect, .message-list-container {
+    width: 75%;
   }
 }

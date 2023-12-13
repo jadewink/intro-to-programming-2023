@@ -4,7 +4,7 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
-copyright.innerHTML = `Jordyn Jones ${thisYear}`;
+copyright.innerHTML = `Jordyn Jones &#169; ${thisYear}`;
 footer.appendChild(copyright);
 
 const skills = ["SQL","HTML","CSS","Squarespace/Wordpress","GitHub","Google Analytics","Adobe Photoshop","Microsoft Office Suite (Word, Excel, OneNote, Publisher, PowerPoint)","Microsoft SQL Server","Microsoft Visual Studio Code","Slack/Discord","Windows/Mac OS","Zoom/Teams","Project Management"];
@@ -20,7 +20,7 @@ for (let i = 0; i < skills.length; i++) {
 
 const messageForm = document.getElementsByName('leave_message');
 let removeButton;
-const messageSection = document.getElementById('messages');
+const messageSection = document.getElementById('message-list');
 const messageList = messageSection.getElementsByTagName('ul')[0];
 
 //When user enters form data and clicks submit, append data to Message List with a remove button for each message
@@ -35,6 +35,7 @@ messageForm[0].addEventListener('submit', (event) => {
 
     newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span> wrote: '+ usersMessage +' </span>';
 
+    //Create remove button
     removeButton = document.createElement('button');
     removeButton.className = "btnRemove";
     removeButton.innerHTML = "Remove";
@@ -48,6 +49,7 @@ messageForm[0].addEventListener('submit', (event) => {
         }
     });
 
+    //Append a remove button to each new message in the list
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm[0].reset();
