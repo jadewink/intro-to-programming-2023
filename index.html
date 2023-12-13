@@ -6,14 +6,14 @@
         <meta name="description" content="Welcome to Jordyn Jones' portfolio website built using my javascript and web programming abilities">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Jordyn Jones">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
     </head>
     <body class="content">
         <header class="main-header">
             <h1 class="name">Jordyn Jones</h1>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="#">home</a></li>
+                    <li><a href="#home">home</a></li>
                     <li><a href="#about">about</a></li>
                     <li><a href="#experience">experience</a></li>
                     <li><a href="#skills">skills</a></li>
@@ -22,11 +22,12 @@
             </nav>
         </header>
         <div class="main-content">
+            <a id="home"></a>
             <div class="banner">
                 <img class="logo feat-img" src="headshot_1-1.jpg" alt="City">
             </div>
-            <h2>About</h2> 
-            <section id="about" class="row">
+            <h2 id="about">About</h2> 
+            <section class="row">
                 <div class="about">
                     <p class="primary col">As an accomplished web developer and an aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands 
                         of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. Combined with my diverse technical background, 
@@ -37,8 +38,8 @@
                     </p>
                 </div>
             </section>
-            <h2>Experience</h2>
-            <section id="experience" class="row">
+            <h2 id="experience">Experience</h2>
+            <section class="row experience">
                 <div class="primary col">
                     <h3>Fiscal Specialist 1</h3>
                     <p>University of Washington - Paul G. Allen School of Computer Science & Engineering</p>
@@ -83,8 +84,8 @@
             <section id="skills" class="row">
                 <ul></ul>
             </section>
-            <h2>Connect</h2>
-            <section id="connect">
+            <h2 id="connect">Connect</h2>
+            <section>
                 <div class="connect">
                     <a href="mailto:jordynjones@gmail.com" target="new">email</a>
                     <a href="https://www.github.com/jadewink" target="new">github</a>
@@ -93,8 +94,8 @@
                 </div>
             </section>
             <!-- Visitors can leave a short message with their name and email -->
-            <h2>Leave a Message</h2>
-            <section id="message" class="row">
+            <h2 id="message">Leave a Message</h2>
+            <section class="row">
                 <form method="post" name="leave_message">
                     <label for="usersName">Name:</label>
                     <input type="text" id="usersName" required="true">

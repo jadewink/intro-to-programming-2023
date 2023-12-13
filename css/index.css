@@ -20,11 +20,6 @@ body {
   /* min-height: 200vh; */
   overflow: hidden;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 p {
 	font-size: .95em;
 	margin-bottom: 1.8em;
@@ -68,6 +63,11 @@ a {
 }
 .main-nav {
 	margin-top: 5px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 .name a,
 .main-nav a {
@@ -143,16 +143,17 @@ section {
   display: flex;
   flex-direction: column;
 }
-#experience ul {
-  padding-left: 15px; 
-  list-style-type: square;
+.experience ul {
+  padding: 15px;
+  list-style-type: square !important;
 }
 #skills ul {
   padding: 1px; 
+  margin-top: 0px;
   margin-bottom: 10px; 
   display: block;
   list-style-type: square;
-  margin-block-start: 1em;
+  /* margin-block-start: 1em; */
   margin-block-end: 1em;
   padding-inline-start: 30px;
 }
