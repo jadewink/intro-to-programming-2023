@@ -37,7 +37,7 @@ messageForm[0].addEventListener('submit', (event) => {
 
     removeButton = document.createElement('button');
     removeButton.className = "btnRemove";
-    removeButton.innerHTML = "remove";
+    removeButton.innerHTML = "Remove";
     removeButton.type = "button";
 
     //When remove button is clicked, remove message from Message List
