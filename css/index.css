@@ -7,17 +7,15 @@
 html, 
 body, 
 .content {
-  height: 100%; /*needed for proper layout*/
+  height: 100%; /* needed for proper layout*/
 }
 body {
-  display:flex;
-  flex-direction:column;
-  /* min-height:100vh; */
+  display: flex;
+  flex-direction: column;
   background-color: #0d1117;
   color: white;
   font-family: "Lato", sans-serif;
   margin: 0;
-  /* min-height: 200vh; */
   overflow: hidden;
 }
 p {
@@ -29,7 +27,7 @@ img {
 	max-width: 100%;
 }
 h2 {
-  width:100%;
+  width: 100%;
   font-size: 1.5em;
   font-weight: bold;
   color: #10689f;
@@ -94,7 +92,6 @@ ul {
 	padding-top: .5em;
 	padding-bottom: .5em;
   flex: 0 0 auto;
-  /* background-color: #dcdcdc; */
 }
 .main-content {
   flex: 1 1 auto;
@@ -120,7 +117,6 @@ ul {
 	padding-left: 1em;
 }
 .main-footer {
-	/* background: #d9e4ea; */
   flex: 0 0 auto;
 	padding: 2em 0;
 	margin-top: 30px;
@@ -154,13 +150,11 @@ section {
   margin-bottom: 10px; 
   display: block;
   list-style-type: square;
-  /* margin-block-start: 1em; */
   margin-block-end: 1em;
   padding-inline-start: 30px;
 }
 .connect {
   width: 100%;
-  /* padding: none; */
   margin: auto;
 } 
 
@@ -169,7 +163,6 @@ section {
 .container {
   width: 80%;
   max-width: 1200px;
-  /* margin: 0 auto; */
 }
 
 .container * {
@@ -250,18 +243,15 @@ section {
 /* old*/
 
 .message {
-  display:flex;
+  display: flex;
   width: 87%;
 }
 .message-list {
-  width:100%;
-  /* width:90%; */
-  /* padding: none; */
+  width: 100%;
   margin: auto;
 }
 .message-list-container {
   width: 90%;
-  /* padding: none; */
   margin: auto;
 } 
 #message-list li {
@@ -276,7 +266,7 @@ section {
 }
 textarea, input {
   font-size: 1em;
-  width:100%;
+  width: 100%;
   border-radius: 5px;
   font-family: Arial;
 }
@@ -290,27 +280,10 @@ textarea, input {
   letter-spacing: .09em;
   border-radius: 2px;
 }
-/* #btnSubmit {
-  padding: 10px;
-  /* margin: 5px; */
-  /* background-color: rgb(15, 165, 118); */
-  /* color: white; */
-  /* border-radius: 10px; */
-/* } */
-/* .btnRemove {
-  padding: 10px;
-  background-color: rgb(15, 165, 118);
-  color: white;
-  border-radius: 10px; */
-  /* border: dotted; */
-/* } */
 /* ================================= 
   Media Queries
 ==================================== */
 @media only screen and (min-width: 456px) {
-  /* .main-header, .main-nav, .row {
-    display: flex;
-  } */
 	.main-header, 
   .row {
 		width: 90%;
@@ -334,14 +307,14 @@ textarea, input {
     width: 87%;
   }
   .connect {
-    margin:auto;
+    margin: auto;
     width: 80%;
   }
   .message-list-container {
-    width:80%;
+    width: 80%;
   }
   .message-list {
-    width:90%;
+    width: 90%;
   }
 }
 @media (min-width: 768px) {
@@ -389,13 +362,8 @@ textarea, input {
     justify-content: space-between;
   }
   .col {
-    /* flex-basis:0; */
     flex:1 30%;
   }
-  /* h2 {
-    width: 86%;
-  } */
-
   .message-list {
     width: 87%;
   }
@@ -415,14 +383,10 @@ textarea, input {
     justify-content: space-between;
   }
   .col {
-    /* flex-basis:0; */
-    flex:1;
+    flex: 1;
   }
-  /* h2 {
-    width: 80%;
-  } */
   h2.message-list{
-    width:87%;
+    width: 87%;
   }
   .connect,  .message-list, .message-list-container {
     width: 85%;
