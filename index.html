@@ -24,7 +24,7 @@
         <div class="main-content">
             <a id="home"></a>
             <div class="banner">
-                <img class="logo feat-img" src="headshot_1-1.jpg" alt="City">
+                <img class="logo feat-img" src="images/headshot_1-1.jpg" alt="City">
             </div>
             <h2 id="about">About</h2> 
             <section class="row">
@@ -96,25 +96,56 @@
             <!-- Visitors can leave a short message with their name and email -->
             <h2 id="message">Leave a Message</h2>
             <section class="row">
-                <form method="post" name="leave_message">
-                    <label for="usersName">Name:</label>
-                    <input type="text" id="usersName" required="true">
-                    <label for="usersEmail">Email:</label>
-                    <input type="email" id="usersEmail" required="true">
-                    <label for="usersMessage">Message:</label>
-                    <textarea id="usersMessage" required="true"></textarea>
-                    <button id="btnSubmit" type="submit">Submit</button>
-                </form>
-        </section>
-        <!-- Submitted messages will appear in unordered list -->
-        <section id="message-list">
-            <h2 class="message-list">Messages</h2>
-            <div class="message-list-container">
-                <ul></ul>
-            </disv>
-        </section>
-        <footer class="main-footer">
-        </footer>
+                <div class="container">
+                    <form method="post" name="leave_message">
+                        <ul class="flex-outer">
+                        <li>
+                            <label for="usersName">First Name</label>
+                            <input type="text" id="usersName" required="true" placeholder="Enter your first name here">
+                        </li>
+                        <!-- <li>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" placeholder="Enter your last name here">
+                        </li> -->
+                        <li>
+                            <label for="usersEmail">Email</label>
+                            <input type="email" id="usersEmail" required = "true" placeholder="Enter your email here">
+                        </li>
+                        <!-- <li>
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone here">
+                        </li> -->
+                        <li>
+                            <label for="usersMessage">Message</label>
+                            <textarea rows="6" id="usersMessage" required="true" placeholder="Enter your message here"></textarea>
+                        </li>
+                        <li>
+                            <button id="btnSubmit" type="submit">Submit</button>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+                <!-- <div class="message">
+                    <form method="post" name="leave_message">
+                        <label for="usersName">Name:</label>
+                        <input type="text" id="usersName" required="true">
+                        <label for="usersEmail">Email:</label>
+                        <input type="email" id="usersEmail" required="true">
+                        <label for="usersMessage">Message:</label>
+                        <textarea id="usersMessage" required="true"></textarea>
+                        <button id="btnSubmit" type="submit">Submit</button>
+                    </form>
+                </div> -->
+            </section>
+            <!-- Submitted messages will appear in unordered list -->
+            <section id="message-list">
+                <h2 class="message-list">Messages</h2>
+                <div class="message-list-container">
+                    <ul></ul>
+                </div>
+            </section>
+            <footer class="main-footer">
+            </footer>
         </div>
         <script src="js/index.js"></script>
     </body>

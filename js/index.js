@@ -4,6 +4,7 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
+//Set footer html value with current year
 copyright.innerHTML = `Jordyn Jones &#169; ${thisYear}`;
 footer.appendChild(copyright);
 
@@ -12,6 +13,7 @@ const skillsSection = document.getElementById('skills');
 
 let skillsList = skillsSection.querySelector('ul');
 
+//For each skill in skills array, create li html element containing and append to list
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.innerHTML = skills[i];
@@ -30,7 +32,6 @@ messageForm[0].addEventListener('submit', (event) => {
     const usersName = event.target.usersName.value;
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
-    // console.log(usersName, usersEmail, usersMessage);
     const newMessage = document.createElement('li');
 
     newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span> wrote: '+ usersMessage +' </span>';
@@ -54,7 +55,7 @@ messageForm[0].addEventListener('submit', (event) => {
     messageList.appendChild(newMessage);
     messageForm[0].reset();
 
-    });
+});
 
 // //When remove button is clicked, remove message from Message List
 // messageList.addEventListener('click', (event) => {
