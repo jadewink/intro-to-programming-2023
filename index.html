@@ -6,37 +6,42 @@
         <meta name="description" content="Welcome to Jordyn Jones' portfolio website built using my javascript and web programming abilities">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Jordyn Jones">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
     </head>
     <body class="content">
-        <nav>
-            <ul class="list">
-                <li><a href="index.html">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#projects">projects</a></li>
+        <header class="main-header">
+            <h1 class="name">Jordyn Jones</h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#projects">projects</a></li>
                 <li><a href="#connect">connect</a></li>
-            </ul>
-        </nav>
-        <!-- <img id="bgImg" src ="lights_bg.jpg"/> -->
-        <section id="about">
-            <h2>About</h2>
-            <div class="container">
-                <img src="headshot.jpg" class="about-1" />
-                <p class="about-2">As an accomplished web developer and an aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands 
-                    of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. Combined with my diverse technical background, 
-                    exceptional attention to detail, and stellar organizational skills, I deliver successful projects on time and within budget. 
-                    Driven by my career experiences I have developed a keen interest in coding, leading me to pursue independent study of programming. Thriving on complex 
-                    technical challenges, I am committed to continuously expanding my knowledge base, fostering collaboration, and driving collective success within any team 
-                    I join.
-                </p>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-content">
+            <a id="home"></a>
+            <div class="banner">
+                <img class="logo feat-img" src="images/headshot_1-1.jpg" alt="City">
             </div>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <span class="container">
-                <span class="item">
+            <h2 id="about">About</h2> 
+            <section class="row">
+                <div class="about">
+                    <p class="primary col">As an accomplished web developer and an aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands 
+                        of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. Combined with my diverse technical background, 
+                        exceptional attention to detail, and stellar organizational skills, I deliver successful projects on time and within budget. 
+                        Driven by my career experiences I have developed a keen interest in coding, leading me to pursue independent study of programming. Thriving on complex 
+                        technical challenges, I am committed to continuously expanding my knowledge base, fostering collaboration, and driving collective success within any team 
+                        I join.
+                    </p>
+                </div>
+            </section>
+            <h2 id="experience">Experience</h2>
+            <section class="row experience">
+                <div class="primary col">
                     <h3>Fiscal Specialist 1</h3>
                     <p>University of Washington - Paul G. Allen School of Computer Science & Engineering</p>
                     <ul>
@@ -46,25 +51,25 @@
                         <li>Support student and faculty payroll inquiries and actively participate in diverse payroll-related assignments and projects.</li>
                         <li>Engage in collaborative efforts with the Payroll Manager, Grants Managers, Graduate Student Services Team, Faculty members, and pertinent stakeholders to resolve queries and address any concerns related to graduate student payroll.</li>
                     </ul>
-                </span>
-                <span class="item">
-                    <h3>Ecommerce Web Developer and Customer Experience Specialist</h3>
+                </div>
+                <div class="secondary col">
+                    <h3>Freelance Web Designer</h3>
                     <p>Blue Bunny Hollow</p>
                     <ul>
                         <li>Architected and implemented a seamless customer experience for end-to-end ecommerce flow, leveraging custom CSS and integrating secure checkout functionality with Stripe and PayPal.</li>
                         <li> Developed a scalable and responsive web presence utilizing Squarespace, incorporating best practices for search engine optimization (SEO), branding design, and devising effective social media marketing strategies.</li>
                         <li>Provided comprehensive training to clients on managing back-end inventory and streamlining order fulfillment processes, ensuring smooth operations and efficient workflows.</li>
                     </ul>
-                </span>
-                <span class="item">
+                </div>
+                <div class="third col">
                     <h3>Social Media Manager</h3>
                     <p>Virtually Savvy</p>
                     <ul>
                         <li>Curated engaging content for clients in the remodeling, design, and local wine industries, ensuring a fresh and captivating online presence.</li>
                         <li>Executed daily social media management for clients, actively driving interactions, fostering engagement, and spearheading follower growth on prominent platforms including Facebook, Instagram, and Pinterest.</li>
                     </ul>
-                </span>
-                <span class="item">
+                </div>
+                <div class="fourth col">
                     <h3>Technical Implementation Specialist</h3>
                     <p>M2 Information Systems</p>
                     <ul>
@@ -74,42 +79,60 @@
                         <li>Successfully program-managed the ONC-ATCB Electronic Health Record (EHR) certification process for MBMD and M2.Webchart.</li>
                         <li>Utilized Selenium C# to build test automation within NUnit/WebDriver.</li>
                     </ul>
-                </span>
-            </span>
-        </section>
-        <section id="skills">
+                </div>
+            </section>
             <h2>Skills</h2>
-            <ul></ul>
-        </section>
-        <section id="projects">
+            <section id="skills" class="row">
+                <ul></ul>
+            </section>
+            <section id="projects">
             <h2>Projects</h2>
             <ul></ul>
         </section>
-        <section id="connect">
-            <h2>Connect</h2>
-            <a href="mailto:jordynjones@gmail.com" target="new">email</a>
-            <a href="https://www.github.com/jadewink" target="new">github</a>
-            <a href="https://www.linkedin.com/in/jordynxjones" target="new">linkedin</a>
-            <a href="https://www.twitter.com/jadewinkdotcom" target="new">twitter</a>
-        </section>
-        <section>
-            <h2>Leave a Message</h2>
-            <form method="post" name="leave_message">
-                <label for="usersName">Name:</label>
-                <input type="text" id="usersName" required="true">
-                <label for="usersEmail">Email:</label>
-                <input type="email" id="usersEmail" required="true">
-                <label for="usersMessage">Message:</label>
-                <textarea id="usersMessage" required="true"></textarea>
-                <button id="btnSubmit" type="submit">Submit</button>
-            </form>
-        </section>
-        <section id="messages">
-            <h2>Messages</h2>
-            <ul></ul>
-        </section>
-        <footer>
-        </footer>
+        <h2 id="connect">Connect</h2>
+            <section>
+                <div class="connect">
+                    <a href="mailto:jordynjones@gmail.com" target="new">email</a>
+                    <a href="https://www.github.com/jadewink" target="new">github</a>
+                    <a href="https://www.linkedin.com/in/jordynxjones" target="new">linkedin</a>
+                    <a href="https://www.twitter.com/jadewinkdotcom" target="new">twitter</a>
+                </div>
+            </section>
+            <!-- Visitors can leave a short message with their name and email -->
+            <h2 id="message">Leave a Message</h2>
+            <section class="row">
+                <div class="container">
+                    <form method="post" name="leave_message">
+                        <ul class="flex-outer">
+                        <li>
+                            <label for="usersName">First Name</label>
+                            <input type="text" id="usersName" required="true" placeholder="Enter your first name here">
+                        </li>
+                        <li>
+                            <label for="usersEmail">Email</label>
+                            <input type="email" id="usersEmail" required = "true" placeholder="Enter your email here">
+                        </li>
+                        <li>
+                            <label for="usersMessage">Message</label>
+                            <textarea rows="6" id="usersMessage" required="true" placeholder="Enter your message here"></textarea>
+                        </li>
+                        <li>
+                            <button id="btnSubmit" type="submit">Submit</button>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <!-- Submitted messages will appear in unordered list -->
+            <section id="message-list">
+                <h2 class="message-list">Messages</h2>
+                <div class="message-list-container">
+                    <ul></ul>
+                </div>
+            </section>
+            <footer class="main-footer">
+            </footer>
+        </div>
         <script src="js/index.js"></script>
     </body>
 </html>
