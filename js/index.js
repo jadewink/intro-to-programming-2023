@@ -64,21 +64,17 @@ let repositories;
 
 githubRequest.onload = function () { 
     repositories = JSON.parse(this.responseText);
-    // console.log(repositories);
-    console.log(repositories.length);
+    console.log(repositories);
 
     let projectSection = document.getElementById('projects');
     let projectList = projectSection.querySelector('ul');
 
     for (let i = 0; i < repositories.length; i++) { 
-        console.log([i]);
         let project = document.createElement('li');
         let url = repositories[i].html_url;
-        project.innerHTML = "<a href=" + url + " target='new' >" + repositories[i].name + "</a>"
-            // + ">" + {  } + "</a>";
-        console.log(project);
+        let description = repositories[i].description;
+        project.innerHTML = description + "<br /><a href=" + url + " target='new' >" + repositories[i].name + "</a>";
         projectList.appendChild(project);
-        console.log(projectList);
     }
 };
 

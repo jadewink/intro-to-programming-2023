@@ -153,9 +153,8 @@ section {
   margin-block-end: 1em;
   padding-inline-start: 30px;
 }
-.projects {
-  width: 100%;
-  margin: auto;
+#projects li {  
+  margin: 0 0 10px 0;
 } 
 .connect {
   width: 100%;
@@ -310,15 +309,12 @@ textarea, input {
   h2 {
     width: 87%;
   }
-  .connect {
+  .projects, .connect, .message-list-container {
     margin: auto;
     width: 80%;
   }
-  .message-list-container {
-    width: 80%;
-  }
   .message-list {
-    width: 90%;
+    width: 87%;
   }
 }
 @media (min-width: 768px) {
@@ -344,13 +340,13 @@ textarea, input {
     flex-wrap: wrap;
     gap: 10px;
   }
-  h2 {
-    width: 87%;
-  }
-  .message-list {
+  h2.message-list-container {
     width: 87%;
   }
   .message-list-container {
+    width:80%;
+  }
+  .projects, .connect {
     width: 85%;
   }
 }
