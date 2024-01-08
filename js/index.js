@@ -52,7 +52,37 @@ messageForm[0].addEventListener('submit', (event) => {
     messageList.appendChild(newMessage);
     messageForm[0].reset();
 
-    });
+});
+    
+let githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/jadewink/repos');
+githubRequest.send();
+let repositories;
+
+githubRequest.onload = function () { 
+    repositories = JSON.parse(this.responseText);
+    // console.log(repositories);
+    console.log(repositories.length);
+
+    let projectSection = document.getElementById('projects');
+    let projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) { 
+        console.log([i]);
+        let project = document.createElement('li');
+        let url = repositories[i].html_url;
+        project.innerHTML = "<a href=" + url + " target='new' >" + repositories[i].name + "</a>"
+            // + ">" + {  } + "</a>";
+        console.log(project);
+        projectList.appendChild(project);
+        console.log(projectList);
+    }
+};
+
+
+
+
+
 
 // //When remove button is clicked, remove message from Message List
 // messageList.addEventListener('click', (event) => {
