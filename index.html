@@ -101,29 +101,20 @@
                 </div>
             </section>
             <!-- Visitors can leave a short message with their name and email -->
-            <h2 id="message">Leave a Message</h2>
-            <section class="row">
-                <div class="container">
-                    <form method="post" name="leave_message">
-                        <ul class="flex-outer">
-                            <li>
-                                <label for="usersName">First Name</label>
-                                <input type="text" id="usersName" required="true" placeholder="Enter your first name here">
-                            </li>
-                            <li>
-                                <label for="usersEmail">Email</label>
-                                <input type="email" id="usersEmail" required = "true" placeholder="Enter your email here">
-                            </li>
-                            <li>
-                                <label for="usersMessage">Message</label>
-                                <textarea rows="6" id="usersMessage" required="true" placeholder="Enter your message here"></textarea>
-                            </li>
-                            <li>
-                                <button id="btnSubmit" type="submit">Submit</button>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
+            <section id="message">
+                <h2>Leave a Message</h2>
+                <form method="post" name="leave_message" class="grid">
+                            <label class="itemlabel" for="usersName">Name</label>
+                            <input class="item" type="text" id="usersName" required="true" placeholder="Enter your name here">
+
+                            <label class="itemlabel" for="usersEmail">Email</label>
+                            <input class="item" type="email" id="usersEmail" required = "true" placeholder="Enter your email here">
+
+                            <label class="itemlabel" for="usersMessage">Message</label>
+                            <textarea class="item" rows="6" id="usersMessage" required="true" placeholder="Enter your message here"></textarea>
+
+                            <button id="btnSubmit" type="submit">Submit</button>
+                </form>
             </section>
             <!-- Submitted messages will appear in unordered list -->
             <section id="message-list">
