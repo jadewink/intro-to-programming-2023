@@ -56,6 +56,27 @@ messageForm[0].addEventListener('submit', (event) => {
     messageForm[0].reset();
 
 });
+    
+let githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/jadewink/repos');
+githubRequest.send();
+let repositories;
+
+githubRequest.onload = function () { 
+    repositories = JSON.parse(this.responseText);
+    console.log(repositories);
+
+    let projectSection = document.getElementById('projects');
+    let projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) { 
+        let project = document.createElement('li');
+        let url = repositories[i].html_url;
+        let description = repositories[i].description;
+        project.innerHTML = description + "<br /><a href=" + url + " target='new' >" + repositories[i].name + "</a>";
+        projectList.appendChild(project);
+    }
+};
 
 // //When remove button is clicked, remove message from Message List
 // messageList.addEventListener('click', (event) => {
