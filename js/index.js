@@ -61,7 +61,6 @@ messageForm[0].addEventListener('submit', (event) => {
 fetch('https://api.github.com/users/jadewink/repos', {
     "method": "GET"
 })
-    
     .then(response => response.json())
     .then(data => generateLinks(data))
     .catch(error => console.error('There was a problem with the Fetch operation:',error))
