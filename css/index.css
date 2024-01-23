@@ -146,8 +146,8 @@ section {
 }
 #skills ul {
   padding: 1px; 
-  margin-top: 0px;
-  margin-bottom: 10px; 
+  /* margin-top: 0px;
+  margin-bottom: 10px;  */
   display: block;
   list-style-type: square;
   margin-block-end: 1em;
@@ -255,7 +255,7 @@ form {
 		font-size: 1.4em;
 	}
   .col {
-    flex:1 50%;
+    flex: 1 50%;
   }
   .zrow {
     flex-wrap: wrap;
@@ -264,7 +264,7 @@ form {
   h2 {
     width: 87%;
   }
-  .projects, .connect, .message-list-container {
+ .skills, .projects, .connect, .message-list-container {
     margin: auto;
     width: 80%;
   }
@@ -292,7 +292,7 @@ form {
 		font-size: 1.4em;
 	}
   .col {
-    flex:1 50%;
+    flex: 1 50%;
   }
   .row {
     flex-wrap: wrap;
@@ -305,9 +305,9 @@ form {
     width: 87%;
   }
   .message-list-container {
-    width:80%;
+    width: 80%;
   }
-  .projects, .connect {
+ .skills, .projects, .connect {
     width: 85%;
   }
 }
@@ -316,19 +316,19 @@ form {
 	.row {
 		width: 87%;
 		max-width: 1150px;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 	}
   .main-header {
     flex-direction: row;
     justify-content: space-between;
   }
   .col {
-    flex:1 30%;
+    flex: 1 30%;
   }
   .message-list {
     width: 87%;
   }
-  .projects, .connect, .message-list-container {
+  .skills, .projects, .connect, .message-list-container {
     width: 80%;
   }
 }
@@ -337,7 +337,7 @@ form {
 	.row {
 		width: 87%;
 		max-width: 1350px;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 	}
   .main-header {
     flex-direction: row;
@@ -349,7 +349,7 @@ form {
   h2.message-list{
     width: 87%;
   }
-  .projects, .connect,  .message-list, .message-list-container {
+  .skills, .projects, .connect,  .message-list, .message-list-container {
     width: 80%;
   }
 
