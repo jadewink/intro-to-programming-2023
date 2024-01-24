@@ -47,27 +47,29 @@ messageForm[0].addEventListener('submit', (event) => {
     messageForm[0].reset();
 
 });
-    
-let githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/jadewink/repos');
-githubRequest.send();
-let repositories;
 
-githubRequest.onload = function () { 
-    repositories = JSON.parse(this.responseText);
-    // console.log(repositories);
+// Fetch API Get request for repository links
+fetch('https://api.github.com/users/jadewink/repos', {
+    "method": "GET"
+})
+    .then(response => response.json())
+    .then(data => generateLinks(data))
+    .catch(error => console.error('There was a problem with the Fetch operation:',error))
 
+//Iterate through response data to generate links to github repository urls
+function generateLinks(data) {
     let projectSection = document.getElementById('projects');
     let projectList = projectSection.querySelector('ul');
 
-    for (let i = 0; i < repositories.length; i++) { 
+    for (let i = 0; i < data.length; i++) {
         let project = document.createElement('li');
-        let url = repositories[i].html_url;
-        let description = repositories[i].description;
-        project.innerHTML = description + "<br /><a href=" + url + " target='new' >" + repositories[i].name + "</a>";
+        let url = data[i].html_url;
+        let description = data[i].description;
+        project.innerHTML = description + "<br /><a href=" + url + " target='new' >" + data[i].name + "</a>";
         projectList.appendChild(project);
     }
-};
+}
+
 
 const today = new Date();
 const thisYear = today.getFullYear();
