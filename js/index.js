@@ -1,14 +1,4 @@
-const today = new Date();
-const thisYear = today.getFullYear();
-
-const footer = document.querySelector('footer');
-const copyright = document.createElement('p');
-
-//Set footer html value with current year
-copyright.innerHTML = `Jordyn Jones &#169; ${thisYear}`;
-footer.appendChild(copyright);
-
-const skills = ["SQL","HTML","CSS","Squarespace/Wordpress","GitHub","Google Analytics","Adobe Photoshop","Microsoft Office Suite (Word, Excel, OneNote, Publisher, PowerPoint)","Microsoft SQL Server","Microsoft Visual Studio Code","Slack/Discord","Windows/Mac OS","Zoom/Teams","Project Management"];
+const skills = ["JavaScript","HTML","CSS","SQL","GitHub","Squarespace","Wordpress","Project Management","Google Analytics","Adobe Photoshop","Microsoft Office Suite","Microsoft SQL Server","Microsoft VS Code","Windows/Mac OS","Slack/Discord","Zoom/Teams"];
 const skillsSection = document.getElementById('skills');
 
 let skillsList = skillsSection.querySelector('ul');
@@ -16,6 +6,7 @@ let skillsList = skillsSection.querySelector('ul');
 //For each skill in skills array, create li html element containing and append to list
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
+    skill.classList.add("block");
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 }
@@ -80,4 +71,29 @@ function generateLinks(data) {
 }
 
 
+const today = new Date();
+const thisYear = today.getFullYear();
+
+const footer = document.getElementById('main-footer');
+const copyright = document.createElement('p');
+
+//Set footer html value with current year
+copyright.innerHTML = `Jordyn Jones &#169; ${thisYear}`;
+footer.appendChild(copyright);
+
+let originalImage;
+
+//Onmouseover function that changes social icon image from blue to white
+//Passes in the img tag id, removes last 4 char file extention from the img source, adds _w.png to display white social icon while mouse is hovering
+function hover(imgId) {
+    originalImage = document.getElementById(imgId).src; 
+    let whiteImage = document.getElementById(imgId).src;
+    whiteImage = whiteImage.slice(0,-4); 
+    whiteImage += "_w.png";
+    document.getElementById(imgId).src=whiteImage;
+}
+//Onmouseout function to return social icon image the color returns to the original color  
+function restore(imgId) {
+    document.getElementById(imgId).src=originalImage;
+}
 
