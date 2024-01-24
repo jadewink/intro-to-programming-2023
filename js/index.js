@@ -24,8 +24,10 @@ messageForm[0].addEventListener('submit', (event) => {
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
     const newMessage = document.createElement('li');
+    newMessage.classList.add("message-list");
+    // const dateStamp = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
 
-    newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span> wrote: '+ usersMessage +' </span>';
+    newMessage.innerHTML = '<a href="mailto:'+ usersEmail +'">'+ usersName +'</a><span>&nbsp;wrote: '+ usersMessage +' </span>';
 
     //Create remove button
     removeButton = document.createElement('button');
