@@ -54,7 +54,6 @@ a {
 ==================================== */
 
 /* ---- Navigation ---- */
-
 .name {
 	font-size: 1.5em;
 	margin: 0;
@@ -87,7 +86,6 @@ ul {
 }
 
 /* ---- Layout Containers ---- */
-
 .main-header {
 	padding-top: .5em;
 	padding-bottom: .5em;
@@ -98,32 +96,32 @@ ul {
   position: relative;/* need this to position inner content */
   overflow-y: auto;
 }
-.banner,
-.main-footer {
-	text-align: center;
-}
 .banner {
-	color: #fff;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
 	background-image: url("../images/lights_bg.jpg");
   background-size: cover;
 	padding: 3.2em 0;
-	margin-bottom: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-.row {
-  flex: 1;
-}
-.col {
-	padding-right: 1em;
-	padding-left: 1em;
-}
-.main-footer {
+.connect {
   flex: 0 0 auto;
 	padding: 2em 0;
 	margin-top: 30px;
+  text-align: center;
+}
+.connect img {
+  width: 30px;
 }
 
 /* ---- Page Elements ---- */
-
+.emphasis {
+  font-style: italic;
+  color: var(--color-medium);
+}
 .logo {
 	width: 190px;
 }
@@ -140,25 +138,37 @@ section {
   display: flex;
   flex-direction: column;
 }
+.about {
+  display: flex;
+}
 .experience ul {
-  padding: 15px;
-  list-style-type: square !important;
+  list-style: none;
+}
+.experience {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0 1rem 0;
+  justify-content: space-between;
 }
 #skills ul {
-  padding: 1px; 
-  /* margin-top: 0px;
-  margin-bottom: 10px;  */
-  display: block;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  gap: 5px;
   list-style-type: square;
   margin-block-end: 1em;
-  padding-inline-start: 30px;
+}
+.block {
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #10689f;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 0.5rem;
 }
 #projects li {  
   margin: 0 0 10px 0;
-} 
-.connect {
-  width: 100%;
-  margin: auto;
 } 
 
 /* ---- Message Form Elements ---- */
@@ -183,7 +193,6 @@ form {
 .item {
   padding: 12px 12px;
   font-weight: 300;
-  /* letter-spacing: .09em; */
   font-size: 1em;
   width: 100%;
   border-radius: 5px;
@@ -240,33 +249,32 @@ form {
   .itemlabel {
     margin-left: 0px !important;
   }
+  h1 {
+    text-align: center;
+  }
 }
 @media only screen and (min-width: 456px) {
-	.main-header, 
-  .row {
+	.main-header {
 		width: 90%;
 		margin: 0 auto;
-  }
-  .main-header {
     flex-direction: column;
     align-items: center;
   }
 	.tagline {
 		font-size: 1.4em;
 	}
-  .col {
-    flex: 1 50%;
-  }
-  .zrow {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
   h2 {
     width: 87%;
   }
- .skills, .projects, .connect, .message-list-container {
+  h1 {
+    text-align: center;
+  }
+ .about, .experience, .skills, .projects, .message-list-container {
     margin: auto;
-    width: 80%;
+    width: 85%;
+  }
+  .experience {
+    flex-direction: column;
   }
   .itemlabel {
     margin-left: 0px !important;
@@ -279,25 +287,15 @@ form {
   .main-header, .main-nav, .row {
     display: flex;
   }
-	.main-header,
-	.row {
+	.main-header {
 		width: 87%;
 		margin: 0 auto;
-	}
-  .main-header {
     flex-direction: column;
     align-items: center;
   }
 	.tagline {
 		font-size: 1.4em;
 	}
-  .col {
-    flex: 1 50%;
-  }
-  .row {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
   .itemlabel {
     margin-left: 0px !important;
   }
@@ -307,50 +305,47 @@ form {
   .message-list-container {
     width: 80%;
   }
- .skills, .projects, .connect {
+  .about, .skills, .projects {
     width: 85%;
+  }
+  .experience {
+    flex-direction: column;
   }
 }
 @media (min-width: 1025px) {
-	.main-header,
-	.row {
+	.main-header {
 		width: 87%;
 		max-width: 1150px;
     flex-wrap: wrap;
-	}
-  .main-header {
     flex-direction: row;
     justify-content: space-between;
-  }
-  .col {
-    flex: 1 30%;
   }
   .message-list {
     width: 87%;
   }
-  .skills, .projects, .connect, .message-list-container {
+  .about, .experience, .skills, .projects, .message-list-container {
     width: 80%;
+  }
+  .experience {
+    flex-direction: row;
   }
 }
 @media (min-width: 1220px) {
-	.main-header,
-	.row {
-		width: 87%;
+	.main-header {
+		width: 90%;
 		max-width: 1350px;
     flex-wrap: wrap;
-	}
-  .main-header {
     flex-direction: row;
     justify-content: space-between;
   }
-  .col {
-    flex: 1;
-  }
-  h2.message-list{
+  h2.message-list {
     width: 87%;
   }
-  .skills, .projects, .connect,  .message-list, .message-list-container {
+  .about, .experience, .skills, .projects, .message-list, .message-list-container {
     width: 80%;
+  }
+  .experience {
+    flex-direction: row;
   }
 
 }
