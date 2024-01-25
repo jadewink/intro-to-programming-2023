@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Jordyn Jones Final Project</title>
         <meta charset="UTF-8">
         <meta name="description" content="Welcome to Jordyn Jones' portfolio website built using javascript, html and css">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Jordyn Jones">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/index.css" type="text/css">
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial"> -->
     </head>
     <body class="content">
         <header class="main-header">
@@ -30,54 +30,48 @@
             </div>
             <section id="about">
                 <h2>About</h2> 
-                <!-- <div class="words">
-                    <span class="bigwords box1">Accomplished</span> 
-                    <span class="smallwords box2">Designer</span>
-                    <span class="bigwords box3">Aspiring</span>
-                    <span class="smallwords box4">Programmer</span>
-                </div> -->
-                <p class="about">As an accomplished designer and aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. I am committed to continuously expanding my knowledge base, fostering collaboration, and driving collective success within any team I join.</p>
+                <p class="bio">As an accomplished designer and aspiring programmer, I have a proven track record of managing and executing creative projects. Balancing the demands of being a mom of two amazing humans and one furry beast I excel in preparation and adaptability. I am committed to continuously expanding my knowledge base, fostering collaboration, and driving collective success within any team I join.</p>
             </section>
             <section id="experience">
                 <h2>Experience</h2>
                 <ul>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Fiscal Specialist 1</strong> - University of Washington</span>
                         <span class="emphasis">Sept 2023 - Present</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Ecommerce Web Designer & Consultant</strong> - Blue Bunny Hollow</span>
                         <span class="emphasis">Apr 2018 - Present</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Social Media Manager</strong> - Virtually Savvy</span>
                         <span class="emphasis">Jan 2017 - Dec 2017</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Technical Implementation Specialist</strong> - M2 Information Systems</span>
                         <span class="emphasis">Jun 2009 - Apr 2016</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Web Director (Board of Directors)</strong> - Edmonds Arts Festival</span>
                         <span class="emphasis">Jun 2009 - Dec 2010</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Database Marketing Coordinator</strong> - SPIE</span>
                         <span class="emphasis">Dec 2006 - Mar 2009</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Information Technology Intern</strong> - The Unity Group</span>
                         <span class="emphasis">Jan 2006 - Dec 2006</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Web Test Intern</strong> - Dealer Information Systems</span>
                         <span class="emphasis">Nov 2005 - Dec 2005</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Financial Aid Peer Advisor</strong> - Western Washington University</span>
                         <span class="emphasis">Sep 2004 - Jun 2005</span>
                     </li>
-                    <li class="experience">
+                    <li class="job">
                         <span><strong>Utilities Account Specialist</strong> - City of Everett Public Works</span>
                         <span class="emphasis">Sep 2003 - Aug 2004</span>
                     </li>
@@ -99,13 +93,13 @@
                 <h2>Leave a Message</h2>
                 <form method="post" name="leave_message" class="grid">
                     <label class="itemlabel" for="usersName">Name</label>
-                    <input class="item" type="text" id="usersName" required="true" placeholder="Enter your name here">
+                    <input class="item" type="text" id="usersName" required="required" placeholder="Enter your name here">
 
                     <label class="itemlabel" for="usersEmail">Email</label>
-                    <input class="item" type="email" id="usersEmail" required = "true" placeholder="Enter your email here">
+                    <input class="item" type="email" id="usersEmail" required="required" placeholder="Enter your email here">
 
                     <label class="itemlabel" for="usersMessage">Message</label>
-                    <textarea class="item" rows="6" id="usersMessage" required="true" placeholder="Enter your message here"></textarea>
+                    <textarea class="item" rows="6" id="usersMessage" required="required" placeholder="Enter your message here"></textarea>
 
                     <button id="btnSubmit" type="submit">Submit</button>
                 </form>
@@ -113,7 +107,7 @@
             <!-- Submitted messages will appear in unordered list -->
             <section id="message-list">
                 <h2>Messages</h2>
-                    <ul></ul>
+                <ul></ul>
             </section>
             <footer>
                 <div id="main-footer" class="connect"> 

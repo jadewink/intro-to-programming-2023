@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   background-color: #0d1117;
   color: white;
-  font-family: "Lato", sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   overflow: hidden;
 }
@@ -43,6 +43,7 @@ h3 {
 a {
   color: #10689f;
   text-decoration: none;
+  font-weight: bold;
   &:hover,
   &:focus {
     text-decoration: underline;
@@ -72,16 +73,11 @@ ul {
 	text-align: center;
 	display: block;
 	padding: 10px 15px;
-}
-.main-nav a {
 	font-size: .95em;
   color: #10689f;
 	text-transform: uppercase;
 }
-.main-nav a:hover {
-	color: #ffffff;
-}
-.projects a:hover, .connect a:hover {
+.main-nav a:hover, .projects a:hover{
 	color: #ffffff;
 }
 
@@ -120,7 +116,6 @@ ul {
 /* ---- Page Elements ---- */
 .emphasis {
   font-style: italic;
-  color: var(--color-medium);
 }
 .logo {
 	width: 190px;
@@ -138,13 +133,15 @@ section {
   display: flex;
   flex-direction: column;
 }
-.about {
+.bio {
   display: flex;
 }
-.experience ul {
+.job ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
-.experience {
+.job {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -175,7 +172,6 @@ section {
 form {
   width: 87%;
   max-width: 800px;
-  /* margin: 0 auto; */
 }
 .grid {
   display: grid;
@@ -212,12 +208,16 @@ form {
 }
 .message-list {
   padding: 5px 5px 5px 5px;
-  list-style: none;
   display: flex;
   flex-direction: row;
   width: 90%;
   margin: auto;
   align-items: center;
+}
+.message-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 #message-list:has(ul:empty) {
   display: none;
@@ -260,11 +260,11 @@ form {
   h1 {
     text-align: center;
   }
- .about, .experience, .skills, .projects, .message-list, .message-list-container {
+ .bio, .job, .skills, .projects, .message-list, .message-list-container {
     margin: auto;
     width: 85%;
   }
-  .experience {
+  .job {
     flex-direction: column;
   }
   .itemlabel {
@@ -296,10 +296,10 @@ form {
   .message-list-container {
     width: 80%;
   }
-  .about, .skills, .projects {
+  .bio, .skills, .projects {
     width: 85%;
   }
-  .experience {
+  .job {
     flex-direction: column;
   }
 }
@@ -314,10 +314,10 @@ form {
   .message-list {
     width: 87%;
   }
-  .about, .experience, .skills, .projects, .message-list, .message-list-container {
+  .bio, .job, .skills, .projects, .message-list, .message-list-container {
     width: 80%;
   }
-  .experience {
+  .job {
     flex-direction: row;
   }
 }
@@ -332,11 +332,10 @@ form {
   h2.message-list {
     width: 87%;
   }
-  .about, .experience, .skills, .projects, .message-list, .message-list-container {
+  .bio, .job, .skills, .projects, .message-list, .message-list-container {
     width: 80%;
   }
-  .experience {
+  .job {
     flex-direction: row;
   }
-
 }
