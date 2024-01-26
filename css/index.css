@@ -136,7 +136,7 @@ section {
 .bio {
   display: flex;
 }
-.job ul {
+#experience ul {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -214,7 +214,7 @@ form {
   margin: auto;
   align-items: center;
 }
-.message-list ul {
+#message-list ul {
   list-style: none;
   display: flex;
   flex-direction: column;
