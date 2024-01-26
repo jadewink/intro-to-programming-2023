@@ -243,6 +243,10 @@ form {
   h1 {
     text-align: center;
   }
+  section {
+    width: 95%;
+    margin: auto;
+  }
 }
 @media only screen and (min-width: 456px) {
 	.main-header {
